@@ -2,9 +2,3 @@ discourse_chitika:
   chitika_publisher_id:
     default: "forum-automation"
     client: true
-  chitika_width:
-    default: "728"
-    client: true
-  chitika_height:
-    default: "90"
-    client: true
