@@ -3,8 +3,8 @@ discourse_chitika:
     default: "forum-automation"
     client: true
   chitika_width:
-    default: "728"
+    default: 728
     client: true
   chitika_height:
-    default: "90"
+    default: 90
     client: true

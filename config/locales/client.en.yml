@@ -3,4 +3,6 @@ en:
     admin:
       site_settings:
         categories:
-          discourse_chitika: "Chitika"
+          discourse_chitika: "Chitika Ads"
+       	chitika_width: "Banner width"
+       	chitika_height: "Banner Height"
