@@ -1,7 +1,7 @@
-# name: discourse-bsa
-# about: BuySellAds units for Discourse
-# version: 0.2
-# authors: Vikhyat Korrapati
+# name: discourse-chitika
+# about: Chitika for Discourse
+# version: 0.1
+# authors: Ajmal M Sali
 
-register_asset "javascripts/ad_units.js"
-register_asset "stylesheets/ad_units.scss"
+register_asset "javascripts/chitika_units.js"
+register_asset "stylesheets/chitika_units.scss"
