@@ -1,13 +1,12 @@
-(function(){
-  var chitika_js = document.createElement('script');
-     chitika_js.type = 'text/javascript';
-     chitika_js.async = true;
-     chitika_js.src = '//cdn.chitika.net/getads.js';
-  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(chitika_js);
-})();
-
 var AdUnitComponent = Ember.Component.extend({
   didInsertElement: function() {
+
+    var chitika_js = document.createElement('script');
+       chitika_js.type = 'text/javascript';
+       chitika_js.async = true;
+       chitika_js.src = '//cdn.chitika.net/getads.js';
+    (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(chitika_js);
+
     if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
     var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"};
     placement_id = window.CHITIKA.units.length;
