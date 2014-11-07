@@ -7,17 +7,12 @@
 })();
 
 var AdUnitComponent = Ember.Component.extend({
-
-  placementId: function(){ 
+  didInsertElement: function() {
     if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
     var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"};
     placement_id = window.CHITIKA.units.length;
     block_id = "chitikaAdBlock-"+placement_id;
-    return block_id;
-  },
-
-  didInsertElement: function() {
-    this.$().html("<div id='" + this.get('placementId') + "' class='chitika'>here goes ad</div>");
+    this.$().html("<div id='" + block_id + "' class='chitika'>here goes ad</div>");
   }
 });
 
