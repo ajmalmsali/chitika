@@ -12,6 +12,7 @@ var AdUnitComponent = Ember.Component.extend({
     var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"};
     placement_id = window.CHITIKA.units.length;
     block_id = "chitikaAdBlock-"+placement_id;
+    window.CHITIKA.units.push(unit);
     this.$().html("<div id='" + block_id + "' class='chitika'></div>");
   }
 });
