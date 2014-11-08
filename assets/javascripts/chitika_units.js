@@ -6,7 +6,7 @@ var AdUnitComponent = Ember.Component.extend({
       placement_id = 0;
       block_id = "chitikaAdBlock-"+placement_id;
       window.CHITIKA.units.push(unit);
-      this.$().html('<script type="text/javascript">var infolinks_pid = 195026;var infolinks_wsid = 3;</script><script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script><script type="text/javascript" async="true" src="//cdn.chitika.net/getads.js"></script>'+"<div id='" + block_id + "' class='chitika'></div>");
+      this.$().html('<script type="text/javascript" async="true" src="//cdn.chitika.net/getads.js"></script>'+"<div id='" + block_id + "' class='chitika'></div>");
 
   }
 });
