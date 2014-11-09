@@ -1,22 +1,23 @@
 var AdUnitComponent = Ember.Component.extend({
   didInsertElement: function() {
   
-  window.CHITIKA = undefined;
-  window.CHITIKA_ADS = undefined;
+  // window.CHITIKA = undefined;
+  // window.CHITIKA_ADS = undefined;
 
-    var rand = Math.floor((Math.random() * 1000) + 1);
-    var chitika_js = document.createElement('script');
-    chitika_js.type = 'text/javascript';
-    chitika_js.async = true;
-    chitika_js.src = '//cdn.chitika.net/getads.js?ra='+rand;
-    this.$().html(chitika_js);
+    // var rand = Math.floor((Math.random() * 1000) + 1);
+    // var chitika_js = document.createElement('script');
+    // chitika_js.type = 'text/javascript';
+    // chitika_js.async = true;
+    // chitika_js.src = '//cdn.chitika.net/getads.js?ra='+rand;
+    // this.$().html(chitika_js);
 
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"};
-    placement_id = window.CHITIKA.units.length;
-    block_id = "chitikaAdBlock-"+placement_id;
-    window.CHITIKA.units.push(unit);
-    this.$().append("<div id='" + block_id + "' class='chitika'></div>");
+    // if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+    // var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"};
+    // placement_id = window.CHITIKA.units.length;
+    // block_id = "chitikaAdBlock-"+placement_id;
+    // window.CHITIKA.units.push(unit);
+        // this.$().append("<div id='" + block_id + "' class='chitika'></div>");
+    this.$().html('<script type="text/javascript">( function() { if (window.CHITIKA === undefined) { window.CHITIKA = { \'units\' : [] }; }; var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"}; var placement_id = window.CHITIKA.units.length; window.CHITIKA.units.push(unit); document.write(\'<div id="chitikaAdBlock-\' + placement_id + \'"></div>\'); }()); </script> <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>');
 
   }
 });
