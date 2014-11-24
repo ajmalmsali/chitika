@@ -1,17 +1,28 @@
 var AdUnitComponent = Ember.Component.extend({
   didInsertElement: function() {
   
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"};
-    placement_id = window.CHITIKA.units.length;
-    block_id = "chitikaAdBlock-"+placement_id;
-    window.CHITIKA.units.push(unit);
-    this.$().html('<script type="text/javascript" src="http://cdn.chitika.net/getads.js" async></script>'+"<div id='" + block_id + "' class='chitika'></div>"+
-      '<script type="text/javascript">'+
-      'var infolinks_pid = 195026;'+
-      'var infolinks_wsid = 3;'+
-      '</script>'+
-      '<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>');
+    // if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+    // var unit = {"calltype":"async[2]","publisher":"forumautomation","width":728,"height":90,"sid":"Chitika Default"};
+    // placement_id = window.CHITIKA.units.length;
+    // block_id = "chitikaAdBlock-"+placement_id;
+    // window.CHITIKA.units.push(unit);
+    // this.$().html('<script type="text/javascript" src="http://cdn.chitika.net/getads.js" async></script>'+
+    //   "<div id='" + block_id + "' class='chitika'></div>"+
+    //   '<script type="text/javascript">'+
+    //   'var infolinks_pid = 195026;'+
+    //   'var infolinks_wsid = 3;'+
+    //   '</script>'+
+    //   '<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>');
+  
+    this.$().html('<script type="text/javascript">'+
+      'google_ad_client = "ca-pub-9934830286986126";'+
+      'google_ad_slot = "8832982574";'+
+      'google_ad_width = 728;'+
+      'google_ad_height = 90;'+
+    '</script>'+
+    '<script type="text/javascript"'+
+    'src="//pagead2.googlesyndication.com/pagead/show_ads.js">'+
+    '</script>');
 
 }
 });
