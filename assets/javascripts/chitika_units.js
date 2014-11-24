@@ -14,15 +14,25 @@ var AdUnitComponent = Ember.Component.extend({
     //   '</script>'+
     //   '<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>');
   
-    this.$().html('<script type="text/javascript">'+
-      'google_ad_client = "ca-pub-9934830286986126";'+
-      'google_ad_slot = "8832982574";'+
-      'google_ad_width = 728;'+
-      'google_ad_height = 90;'+
-    '</script>'+
-    '<script type="text/javascript"'+
-    'src="//pagead2.googlesyndication.com/pagead/show_ads.js">'+
-    '</script>');
+  // '<script type="text/javascript">'+
+  //     'google_ad_client = "ca-pub-9934830286986126";'+
+  //     'google_ad_slot = "8832982574";'+
+  //     'google_ad_width = 728;'+
+  //     'google_ad_height = 90;'+
+  //   '</script>'+
+  //   '<script type="text/javascript"'+
+  //   'src="//pagead2.googlesyndication.com/pagead/show_ads.js">'+
+  //   '</script>'
+
+  
+    this.$().html('<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'+
+'<ins class="adsbygoogle"'+
+     'style="display:inline-block;width:728px;height:90px"'+
+     'data-ad-client="ca-pub-9934830286986126"'+
+     'data-ad-slot="8832982574"></ins>'+
+'<script>'+
+'(adsbygoogle = window.adsbygoogle || []).push({});'+
+'</script>');
 
 }
 });
